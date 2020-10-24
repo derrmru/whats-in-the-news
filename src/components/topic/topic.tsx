@@ -19,7 +19,7 @@ const Topic: React.FC = () => {
         setResult(undefined)
         console.log('crash')
 
-        let url: string = 'http://localhost:8000/datasearch/';
+        let url: string = 'https://resonant-gorgeous-pearl.glitch.me/datasearch/';
 
         //POST THE START AND END DATE PARAMETERS TO 
         await fetch(url, {

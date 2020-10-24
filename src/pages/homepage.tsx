@@ -13,7 +13,7 @@ const Homepage: React.FC = () => {
   useEffect(() => {
 
     //IMPORT THE DATA AT ROOT COMPONENT
-      fetch('http://localhost:8000')
+      fetch('https://resonant-gorgeous-pearl.glitch.me')
         .then(response => response.json())
         .then(d => {
           console.log(d)
