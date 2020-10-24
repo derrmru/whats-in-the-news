@@ -4,7 +4,7 @@ Data Visualisation Tools for measuring News content.
 
 Proof of Concept.
 
-Data is scraped from News sources via [Express App](https://github.com/derrmru/scrape-the-news)
+Data is scraped from News sources and served from bespoke [Express App](https://github.com/derrmru/scrape-the-news).
 
 ## Used Technologies and Libraries
 
@@ -14,4 +14,3 @@ Data is scraped from News sources via [Express App](https://github.com/derrmru/s
 - [React](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Hookrouter](https://github.com/Paratron/hookrouter)
-- 
