@@ -1,0 +1,10 @@
+:root {
+  --main-color: #6F1D1B;
+  --second-color: #3C1B43;
+  --text-color: #321325;
+  --the-white: #E2DCDE;
+}
+
+.Homepage {
+    padding: 20px;
+  }

@@ -1,0 +1,9 @@
+.not-found-box {
+    height: 400px;
+    margin: 20px;
+}
+
+Footer {
+    position: absolute;
+    bottom: 0;
+}

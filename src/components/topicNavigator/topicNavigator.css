@@ -1,0 +1,78 @@
+h4 {
+    margin: 10px 0 0 10px;
+}
+
+.topic-navigator {
+    background-color: var(--main-color);
+    color: var(--the-white);
+    width: 30%;
+}
+
+.sticky-topic-nav {
+    border: 3px solid var(--the-white);
+    position: sticky;
+    top: 0;
+    margin: 20px 20px 40px 20px;
+    padding: 20px 0 40px 0;
+}
+
+.sticky-topic-nav form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 10px 5px;
+}
+
+form button {
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--the-white);
+    border: none;
+}
+
+form button:hover {
+    background-color: var(--second-color);
+    color: var(--the-white);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li:hover {
+    cursor: pointer;
+}
+
+.the-topic {
+    width: 90%;
+    margin: auto;
+}
+
+.run-button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--the-white);
+    cursor: pointer;
+}
+
+.run-button:hover {
+    background-color: var(--second-color);
+    color: var(--the-white);
+}
+
+@media only screen and (max-width: 770px) {
+    .topic-navigator {
+        width: 100%;
+    }
+}

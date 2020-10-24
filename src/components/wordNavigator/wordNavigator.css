@@ -1,0 +1,76 @@
+.word-navigator {
+    width: 30%; 
+    background-color: var(--main-color);
+    color: var(--the-white);
+}
+
+.sticky-word-nav {
+    border: 3px solid var(--the-white);
+    position: sticky;
+    top: 0;
+    margin: 20px 20px 40px 20px;
+    padding: 20px 0 40px 0;
+}
+
+.word-navigator h2 {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.current-word {
+    width: 80%;
+    height: 60px;
+    margin: 20px auto;
+    border: 2px solid var(--the-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-word-list {
+    width: 80%;
+    margin: 20px auto;
+}
+
+hr {
+    width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+    .sticky-word-nav {
+        border: none;
+        margin: 0px 0px 5px 0px;
+        padding: 5px 0 10px 0;
+    }
+
+    .current-word {
+        margin: 0 auto;
+        padding: 0;
+        height: auto;
+    }
+
+    .current-word-list {
+        margin: 5px 20px;
+    }
+
+    .current-word h3 {
+        font-size: 14px;
+    }
+
+    .word-navigator {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 1500;
+    }
+
+    .current-word-list h3 {
+        font-size: 14px;
+    }
+
+    .current-word-list ul {
+        padding: 0 0 0 10px;
+        font-size: 12px;
+    }
+}

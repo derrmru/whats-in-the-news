@@ -1,0 +1,117 @@
+.scatter-container {
+    height: auto;
+    width: 65%;
+    margin: 0 auto 20px 1%;
+    color: var(--second-color);
+}
+
+.graph-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.y-axis {
+    text-align: right;
+    height: 430px;
+    padding: 0 5px 0 0;
+    display: flex;
+    flex-direction: column-reverse;
+    border-right: 2px solid var(--main-color);
+}
+
+.y-axis p {
+    writing-mode: vertical-lr;
+    text-orientation: unset;
+    padding: 0;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    margin: auto;
+}
+
+.graph {
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.datapoint {
+    height: 10px;
+    font-size: 30px;
+    color: var(--second-color);
+    cursor: pointer;
+    width: 10px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.datapoint:hover {
+    transition: 0.2s;
+    width: 13px;
+    height: 13px;
+    color: var(--second-color);
+}
+
+.x-axis {
+    width: 94%;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 2px solid var(--main-color);
+    font-size: 12px;
+}
+
+.date-text {
+    transform: rotate(-50deg);
+    margin: 20px 0;
+}
+
+@media only screen and (max-width: 770px) {
+    .scatter-container {
+        height: auto;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .scatter-container {
+        width: 100%;
+    }
+    .graph {
+        width: 90%;
+        margin-right: 10px;
+    }
+    .x-axis {
+        width: 90%;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .graph {
+        margin-right: 0;
+    }
+    .x-axis {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .scatter-container {
+        width: 100%;
+    }
+    .graph {
+        width: 85%;
+    }
+    .x-axis {
+        width: 85%;
+    }
+    .date-text {
+        font-size: 10px;
+    }
+}

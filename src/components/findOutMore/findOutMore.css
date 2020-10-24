@@ -1,0 +1,30 @@
+.find-out-more {
+    width: 100%;
+    height: auto;
+    background-color: var(--second-color);
+    text-align: center;
+    color: white;
+    margin: 20px 0 0 0;
+    padding: 15px 0;
+}
+
+.find-out-more:hover {
+    background-color: var(--the-white);
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.exit-button {
+    width: 100%;
+    text-align: right;
+}
+
+.main-text {
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+
+.main-text p {
+    text-decoration-line: none;
+}

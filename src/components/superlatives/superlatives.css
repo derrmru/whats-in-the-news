@@ -1,0 +1,14 @@
+.word-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 5px;
+    border-bottom: 1px solid var(--second-color);
+}
+
+.average-title {
+    width: 100%;
+    background-color: var(--second-color);
+    color: var(--the-white);
+    padding: 10px 5px;
+}

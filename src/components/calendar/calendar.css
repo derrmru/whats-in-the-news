@@ -1,0 +1,78 @@
+.calendar {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: black;
+}
+
+.calendar button {
+    width: 7%;
+    cursor: pointer;
+    border: none;
+}
+
+.calendar button:hover {
+    background-color: var(--second-color);
+    color: white;
+    transition: 0.4s;
+}
+
+.calendar hr {
+    width: 90%;
+}
+
+.calendar-field {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    padding: 10px 5px;
+}
+
+.cal-ui-container {
+    width: 94%;
+    margin: auto;
+    padding: 0 0 20px 0;
+    background-color: white;
+}
+
+.exit-container {
+    text-align: right;
+    margin: 5px;
+}
+
+.exit-container button:hover {
+    background-color: white;
+    color: black;
+}
+
+.exit-cal {
+    font-size: 10px;
+    background-color: white;
+    border: none;
+    margin: 1px;
+    cursor: pointer;
+}
+
+.cal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 15px 5px 15px;
+}
+
+.cal-days {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.day {
+    width: 14%;
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: var(--second-color);
+    color: var(--the-white);
+    transition: 0.2s;
+}

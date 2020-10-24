@@ -1,0 +1,24 @@
+.topic-banner {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--the-white);
+    margin: 0 0 20px 0;
+}
+
+.topic-body {
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: 3px solid var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+@media only screen and (max-width: 770px) {
+    .topic-body {
+        flex-direction: column;
+    }
+}
