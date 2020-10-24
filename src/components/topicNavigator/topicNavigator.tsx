@@ -47,14 +47,14 @@ const TopicNavigator: React.FC<Props> = (props) => {
         <div className="topic-navigator">
             <div className="sticky-topic-nav">
 
-                <h4>Start Date</h4>
+                <h3>Start Date</h3>
                 <Calendar
                     name="startDate"
                     date={startDate}
                     updateCalendar={updateCalendar}
                     />
 
-                <h4>End Date</h4>
+                <h3>End Date</h3>
                 <Calendar
                     name="endDate"
                     date={endDate}
@@ -63,7 +63,7 @@ const TopicNavigator: React.FC<Props> = (props) => {
 
                 <hr />
 
-                <h4>Create Your Topic</h4>
+                <h3>Create Your Topic</h3>
                 <form>
                     <input 
                         type="text" 
