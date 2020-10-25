@@ -29,7 +29,7 @@
     text-align: center;
     font-size: 12px;
     width: 100%;
-    margin: auto 5px;
+    margin: auto 0 auto 5px;
 }
 
 .graph {
@@ -130,10 +130,10 @@
         width: 100%;
     }
     .graph {
-        width: 85%;
+        width: 90%;
     }
     .x-axis {
-        width: 85%;
+        width: 90%;
     }
     .datapoint {
         margin: 5px;
