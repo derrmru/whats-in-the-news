@@ -4,7 +4,7 @@ Data Visualisation Tools for measuring News content.
 
 Proof of Concept.
 
-Data is scraped from News sources and served from bespoke [Express App](https://github.com/derrmru/scrape-the-news).
+Data is scraped from News sources and served from bespoke [Express App](https://glitch.com/edit/#!/resonant-gorgeous-pearl).
 
 ## Used Technologies and Libraries
 
