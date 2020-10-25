@@ -1,6 +1,11 @@
-h3 {
+.topic-navigator h3 {
     font-size: 16px;
     margin: 10px 0 0 10px;
+}
+
+.topic-navigator h4 {
+    font-size: 14px;
+    margin: 10px 0 20px 10px;
 }
 
 .topic-navigator {

@@ -64,6 +64,7 @@ const TopicNavigator: React.FC<Props> = (props) => {
                 <hr />
 
                 <h3>Create Your Topic</h3>
+                <h4>Add words to your topic and click update to visualise.</h4>
                 <form>
                     <input 
                         type="text" 

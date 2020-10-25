@@ -12,7 +12,7 @@ const WordNavigator: React.FC <Props> = (props) => {
             <div className="sticky-word-nav">
                 <h2>Today's Top 20 Words</h2>
                 <div className="current-word">
-                    <h3>{props.showWord}</h3>
+                    <h3 className="frequency-title">{props.showWord}</h3>
                 </div>
                 <div className="current-word-list">
                     <h3>Frequency:</h3>

@@ -54,24 +54,25 @@ const Splatter: React.FC <Props> = (props) => {
         </div>
         <div className="splatter">
             {   
-                allWords !== undefined &&
-                        Object.keys(allWords).map((item, i) => {
-                                const fonts = (allWords[item] * 20) + '%';
-                                let top = Math.floor(Math.random() * Math.floor(90));
-                                let left: number = Math.floor(Math.random() * Math.floor(100))
-                                const zIndex = allWords[item] > 4 ? 500 : 0
-                                    return <p 
-                                            id={item + i}
-                                            key={'word' + item + i} 
-                                            style={{fontSize: fonts, top: (top + '%'), left: (left + '%'), zIndex: zIndex}}
-                                            className="sized-word"
-                                            title={item + ', appears ' + allWords[item] + (allWords[item] === 1 ? ' time ' : ' times ') + ' in the news today'}
-                                            onMouseOver={() => allWords[item] > 2 && handleHover(allWords, item, i)}
-                                            onMouseLeave={(e) => removeAnnotation(e, item)}
-                                            >
-                                                {item}
-                                            </p>
-                        }) 
+                allWords !== {} ?
+                    Object.keys(allWords).map((item, i) => {
+                        const fonts = (allWords[item] * 20) + '%';
+                        let top = Math.floor(Math.random() * Math.floor(90));
+                        let left: number = Math.floor(Math.random() * Math.floor(100))
+                        const zIndex = allWords[item] > 4 ? 500 : 0
+                            return <p 
+                                    id={item + i}
+                                    key={'word' + item + i} 
+                                    style={{fontSize: fonts, top: (top + '%'), left: (left + '%'), zIndex: zIndex}}
+                                    className="sized-word"
+                                    title={item + ', appears ' + allWords[item] + (allWords[item] === 1 ? ' time ' : ' times ') + ' in the news today'}
+                                    onMouseOver={() => allWords[item] > 2 && handleHover(allWords, item, i)}
+                                    onMouseLeave={(e) => removeAnnotation(e, item)}
+                                    >
+                                        {item}
+                                    </p>
+                }) : 
+                <div className="loading-splatter">Loading...</div>
             }
         </div>
         </>

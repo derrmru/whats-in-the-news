@@ -9,6 +9,13 @@
     color: var(--the-white);
 }
 
+.loading-splatter {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .splatter {
     height: 90vh;
     width: 94%;
