@@ -12,7 +12,7 @@
     padding: 20px 0 40px 0;
 }
 
-.word-navigator h2 {
+.word-navigator h3 {
     margin: 20px auto;
     text-align: center;
 }
@@ -21,6 +21,7 @@
     width: 80%;
     height: 60px;
     margin: 20px auto;
+    padding: 0;
     border: 2px solid var(--the-white);
     display: flex;
     flex-direction: row;
@@ -46,7 +47,7 @@ hr {
 
     .current-word {
         margin: 0 auto;
-        padding: 0 0 10px 0;
+        padding: 0 0 0 0;
         height: auto;
     }
 

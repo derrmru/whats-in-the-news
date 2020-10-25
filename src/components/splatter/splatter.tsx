@@ -56,9 +56,9 @@ const Splatter: React.FC <Props> = (props) => {
             {   
                 allWords !== undefined &&
                         Object.keys(allWords).map((item, i) => {
-                                const fonts = (allWords[item] * 15) + '%';
+                                const fonts = (allWords[item] * 20) + '%';
                                 let top = Math.floor(Math.random() * Math.floor(90));
-                                let left: number = Math.floor(Math.random() * Math.floor(94))
+                                let left: number = Math.floor(Math.random() * Math.floor(100))
                                 const zIndex = allWords[item] > 4 ? 500 : 0
                                     return <p 
                                             id={item + i}

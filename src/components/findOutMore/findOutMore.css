@@ -29,6 +29,10 @@
     text-decoration-line: none;
 }
 
+.main-text h3 {
+    margin: 0;
+}
+
 @media only screen and (max-width: 600px) {
     .main-text {
         width: 80%;
