@@ -44,6 +44,7 @@ const TopicVisual: React.FC <Props> = (props) => {
         Object.values(frequencyArr).map(num => {
             return totalTopic.current += num
         })
+        console.log(totalTopic.current)
     })
 
     return (

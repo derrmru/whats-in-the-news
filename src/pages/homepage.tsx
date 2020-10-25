@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import OrgBars from '../components/orgBars/orgBars';
 import Splatter from '../components/splatter/splatter';
 import Sentiment from '../components/sentiment/sentiment';
@@ -9,6 +9,7 @@ import './homepage.css';
 
 const Homepage: React.FC = () => {
   const [data, setData] = useState<[{[index: string]: any}]>([{}]);
+  const noRenders = useRef(0);
 
   useEffect(() => {
 
@@ -19,7 +20,8 @@ const Homepage: React.FC = () => {
           console.log(d)
           setData(d)
         })
-
+        noRenders.current += 1;
+        console.log(noRenders.current)
   })
 
   return (
@@ -27,9 +29,9 @@ const Homepage: React.FC = () => {
       {
         data !== [{}] && 
         <>
-        <Splatter data={data} />
-        <OrgBars data={data} />
-        <Sentiment data={data} />
+        <Splatter key={'splatter' + noRenders.current} data={data} />
+        <OrgBars key={'orgbars' + noRenders.current}  data={data} />
+        <Sentiment key={'sentiment' + noRenders.current}  data={data} />
         <Topic />
         </>
       }

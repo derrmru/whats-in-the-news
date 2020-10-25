@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import TopicNavigator from '../topicNavigator/topicNavigator'
 import TopicVisual from '../topicVisual/topicVisual'
 import './topic.css'
@@ -43,7 +43,7 @@ const Topic: React.FC = () => {
         })
     }
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const today = new Date();
         (result === undefined && loading === true) && updateSearch(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7), new Date(), topic)
     })
