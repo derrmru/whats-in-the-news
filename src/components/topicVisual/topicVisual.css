@@ -29,7 +29,7 @@
     text-align: center;
     font-size: 12px;
     width: 100%;
-    margin: auto;
+    margin: auto 2px;
 }
 
 .graph {
@@ -91,7 +91,7 @@
         margin-right: 10px;
     }
     .y-axis p {
-        font-size: 8px;
+        font-size: 9px;
     }
     .date-text {
         font-size: 8px;
