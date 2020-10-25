@@ -90,6 +90,12 @@
         width: 90%;
         margin-right: 10px;
     }
+    .y-axis p {
+        font-size: 8px;
+    }
+    .date-text {
+        font-size: 8px;
+    }
 }
 
 @media only screen and (max-width: 430px) {
@@ -110,8 +116,5 @@
     }
     .x-axis {
         width: 82%;
-    }
-    .date-text {
-        font-size: 10px;
     }
 }
