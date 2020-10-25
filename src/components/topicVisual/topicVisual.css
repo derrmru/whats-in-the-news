@@ -78,9 +78,9 @@
     }
 }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 1010px) {
     .scatter-container {
-        width: 100%;
+        width: 90%;
     }
     .graph {
         width: 90%;
@@ -98,16 +98,19 @@
     }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 515px) {
     .graph {
         margin-right: 0;
     }
     .x-axis {
         margin-right: 0;
     }
+    .datapoint {
+        margin: 10px;
+    }
 }
 
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 400px) {
     .scatter-container {
         width: 100%;
     }
@@ -116,5 +119,8 @@
     }
     .x-axis {
         width: 82%;
+    }
+    .datapoint {
+        margin: 5px;
     }
 }
