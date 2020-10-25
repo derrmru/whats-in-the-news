@@ -21,7 +21,6 @@ const TopicVisual: React.FC <Props> = (props) => {
     let tempArr: any = {};
     const topicOverTime = () => {
         (result !== undefined && topic !== undefined) && result.map((doc) => {
-            console.log('bang')
             const wordcount: any = doc.wordcount;
             let topicCount = 0;
             let otherCount = 0;
@@ -44,7 +43,6 @@ const TopicVisual: React.FC <Props> = (props) => {
         Object.values(frequencyArr).map(num => {
             return totalTopic.current += num
         })
-        console.log(totalTopic.current)
     })
 
     return (

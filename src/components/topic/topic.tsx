@@ -17,7 +17,6 @@ const Topic: React.FC = () => {
 
         //reset state
         setResult(undefined)
-        console.log('crash')
 
         let url: string = 'https://resonant-gorgeous-pearl.glitch.me/datasearch/';
 
@@ -46,7 +45,7 @@ const Topic: React.FC = () => {
     useEffect(() => {
         const today = new Date();
         (result === undefined && loading === true) && updateSearch(new Date(today.getFullYear(), today.getMonth(), today.getDate() - 7), new Date(), topic)
-    })
+    }, [])
 
     return (
         <div className="topic-container">
