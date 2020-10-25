@@ -10,9 +10,14 @@
     align-items: center;
 }
 
+.footer-text {
+    font-size: 14px;
+}
+
 .footer a {
     color: white;
 }
+
 
 .footer a:hover {
     color: var(--second-color);
