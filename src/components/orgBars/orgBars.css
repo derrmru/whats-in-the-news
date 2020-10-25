@@ -41,7 +41,7 @@
 }
 
 .word-bar {
-    margin: 0 1px 0 0;
+    margin: 0 2px 0 0;
     background-color: var(--main-color);
     cursor: pointer;
 }
