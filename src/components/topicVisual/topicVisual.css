@@ -115,10 +115,25 @@
         width: 100%;
     }
     .graph {
-        width: 82%;
+        width: 88%;
     }
     .x-axis {
-        width: 82%;
+        width: 88%;
+    }
+    .datapoint {
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 315px) {
+    .scatter-container {
+        width: 100%;
+    }
+    .graph {
+        width: 85%;
+    }
+    .x-axis {
+        width: 85%;
     }
     .datapoint {
         margin: 5px;
