@@ -11,7 +11,7 @@ const Homepage: React.FC = () => {
   const [data, setData] = useState<[{[index: string]: any}]>([{}]);
 
   const fetchURL = async () => {
-    await fetch('https://resonant-gorgeous-pearl.glitch.me')
+    await fetch('https://words-news-scraper.herokuapp.com/')
         .then(response => response.json())
         .then(d => {
           console.log(d)

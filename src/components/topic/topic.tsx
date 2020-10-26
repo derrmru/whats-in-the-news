@@ -18,7 +18,7 @@ const Topic: React.FC = () => {
         //reset state
         setResult(undefined)
 
-        let url: string = 'https://resonant-gorgeous-pearl.glitch.me/datasearch/';
+        let url: string = 'https://words-news-scraper.herokuapp.com/datasearch/';
 
         //POST THE START AND END DATE PARAMETERS TO 
         await fetch(url, {
