@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import './splatter.css'
 
 interface Props {
@@ -6,6 +6,7 @@ interface Props {
 }
 
 const Splatter: React.FC <Props> = (props) => {
+    const [refresh, setRefresh] = useState<boolean>(false);
     const data = props.data;
     let allWords: {[index: string]: number} = {};
 
@@ -48,34 +49,40 @@ const Splatter: React.FC <Props> = (props) => {
     }
 
     return (
-        <>
-        <div className="splatter-banner">
-            <h2>Today's News</h2>
+        <div>
+            <div className="splatter-banner">
+                <h2>Today's News</h2>
+            </div>
+            <div className="splatter">
+                <div 
+                    className="rejig"
+                    onClick={() => setRefresh(!refresh)}
+                    >
+                        Rejig
+                </div>
+                {  
+                    allWords !== {} ?
+                        Object.keys(allWords).map((item, i) => {
+                            const fonts = (allWords[item] * 20) + '%';
+                            let top = Math.floor(Math.random() * Math.floor(90));
+                            let left: number = Math.floor(Math.random() * Math.floor(100))
+                            const zIndex = allWords[item] > 4 ? 500 : 0
+                                return <p 
+                                        id={item + i}
+                                        key={'word' + item + i} 
+                                        style={{fontSize: fonts, top: (top + '%'), left: (left + '%'), zIndex: zIndex}}
+                                        className="sized-word"
+                                        title={item + ', appears ' + allWords[item] + (allWords[item] === 1 ? ' time ' : ' times ') + ' in the news today'}
+                                        onMouseOver={() => allWords[item] > 2 && handleHover(allWords, item, i)}
+                                        onMouseLeave={(e) => removeAnnotation(e, item)}
+                                        >
+                                            {item}
+                                        </p>
+                    }) : 
+                    <div className="loading-splatter">Loading...</div>
+                }
+            </div>
         </div>
-        <div className="splatter">
-            {   
-                allWords !== {} ?
-                    Object.keys(allWords).map((item, i) => {
-                        const fonts = (allWords[item] * 20) + '%';
-                        let top = Math.floor(Math.random() * Math.floor(90));
-                        let left: number = Math.floor(Math.random() * Math.floor(100))
-                        const zIndex = allWords[item] > 4 ? 500 : 0
-                            return <p 
-                                    id={item + i}
-                                    key={'word' + item + i} 
-                                    style={{fontSize: fonts, top: (top + '%'), left: (left + '%'), zIndex: zIndex}}
-                                    className="sized-word"
-                                    title={item + ', appears ' + allWords[item] + (allWords[item] === 1 ? ' time ' : ' times ') + ' in the news today'}
-                                    onMouseOver={() => allWords[item] > 2 && handleHover(allWords, item, i)}
-                                    onMouseLeave={(e) => removeAnnotation(e, item)}
-                                    >
-                                        {item}
-                                    </p>
-                }) : 
-                <div className="loading-splatter">Loading...</div>
-            }
-        </div>
-        </>
     )
 }
 
