@@ -35,7 +35,7 @@
     border: 5px solid var(--main-color);
     border-top: 5px solid white;
     animation-name: spin;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 

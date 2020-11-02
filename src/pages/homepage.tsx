@@ -30,7 +30,7 @@ const Homepage: React.FC = () => {
   return (
     <div className="Homepage">
       {//While server is waking up waking up overlay shows
-        loading && <WakingUp />
+        !loading && <WakingUp />
       }
 
       {
