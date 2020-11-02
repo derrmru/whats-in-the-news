@@ -5,10 +5,12 @@ import Sentiment from '../components/sentiment/sentiment';
 import Topic from '../components/topic/topic';
 import Footer from '../components/footer/footer';
 import FindOutMore from '../components/findOutMore/findOutMore';
+import WakingUp from '../components/WakingUp/WakingUp';
 import './homepage.css';
 
 const Homepage: React.FC = () => {
   const [data, setData] = useState<[{[index: string]: any}]>([{}]);
+  const [loading, setLoading] = useState(true);
 
   const fetchURL = async () => {
     await fetch('https://words-news-scraper.herokuapp.com/')
@@ -16,6 +18,7 @@ const Homepage: React.FC = () => {
         .then(d => {
           console.log(d)
           setData(d)
+          setLoading(false)
         })
         .catch(err => console.log(err))
   }
@@ -26,6 +29,10 @@ const Homepage: React.FC = () => {
 
   return (
     <div className="Homepage">
+      {//While server is waking up waking up overlay shows
+        loading && <WakingUp />
+      }
+
       {
         data !== [{}] && 
         <>
