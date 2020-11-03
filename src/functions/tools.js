@@ -12,7 +12,8 @@ module.exports = {
             'WEST',
             'UNREST',
             'PRIEST',
-            'HONEST'
+            'HONEST',
+            'CONTEST'
         ]
 
         const irregulars = [
