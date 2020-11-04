@@ -1,5 +1,5 @@
-module.exports = {
-    isSuperlative: (word) => {
+export default {
+    isSuperlative: (word:string) => {
         let returnValue = false;
 
         const forbiddenWords = [
@@ -31,7 +31,7 @@ module.exports = {
 
         return returnValue
     },
-    isPositive: (word) => {
+    isPositive: (word: string) => {
         let returnValue = false;
 
         const positives = [
@@ -2047,7 +2047,7 @@ module.exports = {
 
         return returnValue
     },
-    isNegative: (word) => {
+    isNegative: (word: string) => {
         let returnValue = false;
 
         const negatives = [
@@ -6841,7 +6841,7 @@ module.exports = {
 
         return returnValue
     },
-    isATrigger: (word) => {
+    isATrigger: (word: string) => {
         let returnValue = false;
 
         const triggerWords = [
