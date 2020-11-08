@@ -13,7 +13,8 @@ export default {
             'UNREST',
             'PRIEST',
             'HONEST',
-            'CONTEST'
+            'CONTEST',
+            'REST'
         ]
 
         const irregulars = [
