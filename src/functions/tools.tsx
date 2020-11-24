@@ -15,7 +15,8 @@ export default {
             'HONEST',
             'CONTEST',
             'REST',
-            'QUEST'
+            'QUEST',
+            'GUEST'
         ]
 
         const irregulars = [
