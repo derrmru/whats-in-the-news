@@ -26,7 +26,7 @@ const FindOutMore: React.FC = () => {
                         <p>The top 20 words section does filter common 'neutral' words, which can be viewed via the <a href="https://github.com/derrmru/scrape-the-news/blob/master/functions/methods.js">repository</a>.</p>
                         <h3>Questions</h3>
                         <p>If you have any questions about this project, get in touch:</p>
-                        <p><a href="thepetersweeney.com">thepetersweeney.com</a></p>
+                        <p><a href="https://thepetersweeney.com" target="_blank" rel="no-referrer">thepetersweeney.com</a></p>
                     </div> : 
                         <div style={{textDecoration: 'underline'}}>Find Out More</div>
             }
