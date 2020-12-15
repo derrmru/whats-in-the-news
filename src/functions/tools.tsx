@@ -17,7 +17,8 @@ export default {
             'REST',
             'QUEST',
             'GUEST',
-            'HARVEST'
+            'HARVEST',
+            'RAINFOREST'
         ]
 
         const irregulars = [
