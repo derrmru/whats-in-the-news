@@ -3,14 +3,14 @@ import './topicVisual.css'
 
 interface Props {
     loading: boolean,
-    result: [{[index: string]: any}] | undefined,
+    result: [{ [index: string]: any }] | undefined,
     topic: [string] | undefined
 }
 
-const TopicVisual: React.FC <Props> = (props) => {
+const TopicVisual: React.FC<Props> = (props) => {
     const result = props.result;
     const topic = props.topic;
-    const [frequencyArr, setFrequencyArr] = useState<{[index: string]: number}>({});
+    const [frequencyArr, setFrequencyArr] = useState<{ [index: string]: number }>({});
     const totalTopic = useRef(0);
 
     //variables to be used in barheight calculation
@@ -24,15 +24,15 @@ const TopicVisual: React.FC <Props> = (props) => {
             const wordcount: any = doc.wordcount;
             let topicCount = 0;
             let otherCount = 0;
-            topic !== undefined && Object.keys(wordcount).map(word => {
-                return topic.indexOf(word) >= 0 ? 
+            topic !== undefined && wordcount && Object.keys(wordcount).map(word => {
+                return topic.indexOf(word) >= 0 ?
                     topicCount = topicCount + Number(wordcount[word]) :
-                        otherCount = otherCount + Number(wordcount[word])
+                    otherCount = otherCount + Number(wordcount[word])
             })
             tempArr = frequencyArr;
-            return tempArr !== undefined && tempArr[doc.scrape_date] ? 
-                tempArr[doc.scrape_date] = tempArr[doc.scrape_date] + (topicCount / otherCount * 100) : 
-                    tempArr[doc.scrape_date] = (topicCount / otherCount * 100);
+            return tempArr !== undefined && tempArr[doc.scrape_date] ?
+                tempArr[doc.scrape_date] = tempArr[doc.scrape_date] + (topicCount / otherCount * 100) :
+                tempArr[doc.scrape_date] = (topicCount / otherCount * 100);
         })
         setFrequencyArr(tempArr)
     }
@@ -50,44 +50,44 @@ const TopicVisual: React.FC <Props> = (props) => {
             <h3>Relative Topic Dominance Over Time</h3>
             {
                 props.loading ?
-                        <div className="loading-icon">
-                            Loading...
-                        </div> : <>
-                                    <div className="graph-top">
-                                        <div className="y-axis">
-                                            <p>Aggregate Percentage of News</p>
-                                            <br />
-                                        </div>
+                    <div className="loading-icon">
+                        Loading...
+                    </div> : <>
+                        <div className="graph-top">
+                            <div className="y-axis">
+                                <p>Aggregate Percentage of News</p>
+                                <br />
+                            </div>
 
-                                        <div className="graph">
-                                            {Object.values(frequencyArr).map((value, i) => {
-                                                if (value > largest) { setLargest(value) };
-                                                return (
-                                                    <div 
-                                                        key={'datapoint' + i}
-                                                        className="datapoint"
-                                                        title={value.toString()}
-                                                        style={{marginBottom: (Math.round(value * unit) + 'px')}}
-                                                        >
-                                                        </div>
-                                                )
-                                            })
+                            <div className="graph">
+                                {Object.values(frequencyArr).map((value, i) => {
+                                    if (value > largest) { setLargest(value) };
+                                    return (
+                                        <div
+                                            key={'datapoint' + i}
+                                            className="datapoint"
+                                            title={value.toString()}
+                                            style={{ marginBottom: (Math.round(value * unit) + 'px') }}
+                                        >
+                                        </div>
+                                    )
+                                })
 
-                                            }
-                                        </div>
-                                        
-                                        <div className="x-axis">
-                                            {Object.keys(frequencyArr).map((date, i) => {
-                                                return <div
-                                                    key={"date" + i}
-                                                    className="date-text"
-                                                    >
-                                                        {date}
-                                                </div>
-                                            })}
-                                        </div>
+                                }
+                            </div>
+
+                            <div className="x-axis">
+                                {Object.keys(frequencyArr).map((date, i) => {
+                                    return <div
+                                        key={"date" + i}
+                                        className="date-text"
+                                    >
+                                        {date}
                                     </div>
-                                </>
+                                })}
+                            </div>
+                        </div>
+                    </>
             }
         </div>
     )
